@@ -22,7 +22,7 @@ test('Login and log out with valid user credentials', async ({ page }) => {
   await helper.logOut();
 });
 
-test('Login with invalid credentials and verify failure', async ({ page }) => {
+test('Login with invalid password and verify failure', async ({ page }) => {
   const helper = new HelperPage(page);
 
   // Perform login with invalid credentials and verify login failure
@@ -30,7 +30,7 @@ test('Login with invalid credentials and verify failure', async ({ page }) => {
   await helper.verifyInvalidLogin();
 });
 
-test('Login with invalid user and verify failure', async ({ page }) => {
+test('Login with wrong user and verify failure', async ({ page }) => {
   const helper = new HelperPage(page);
 
   // Perform login with invalid credentials and verify login failure
