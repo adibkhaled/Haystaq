@@ -80,24 +80,12 @@ The testing covers:
 |TC10|Verify manager can approve timesheet|Timesheet is submitted.|1\. Log in as manager.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
 
 -----
-**7. Test Data**
-
-|**Field**|**Sample Data**|
-| :-: | :-: |
-|Email|test.user@example.com|
-|Password|*****|
-|Date|2024-12-01|
-|Project Name|Website Redesign|
-|Task Description|Create UI mockups|
-|Hours Worked|6|
-
------
-**8. Risks and Assumptions**
+**7. Risks and Assumptions**
 
 - **Risks:** Limited time for testing all browsers/devices.
 - **Assumptions:** Test environment mimics production, and test data is representative.
 -----
-**9. Deliverables**
+**10. Deliverables**
 
 1. Test Execution Report.
 1. Bug Report with priority and severity.
