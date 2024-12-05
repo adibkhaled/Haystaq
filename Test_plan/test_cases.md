@@ -81,7 +81,7 @@ The testing covers:
 |**Test Case ID**|**Test Description**|**Precondition**|**Steps**|**Expected Result**|
 | :-: | :-: | :-: | :-: | :-: |
 |TC12|Verify manager can approve timesheet|Timesheet is submitted.|1\. Log in as manager.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
-|TC12|Verify no one update after approve timesheet|Timesheet is approved.|1\. Log in as user.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
+|TC13|Verify no one update after approve timesheet|Timesheet is approved.|1\. Log in as user.<br>2\. Navigate to "Approve Timesheets".<br>3\. Timesheet can not update anymore|Timesheet status remain "Approved".|
 
 -----
 **7. Risks and Assumptions**
