@@ -1,0 +1,144 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Playwright Test Report</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          background-color: #f9f9f9;
+        }
+        .header-container {
+          text-align: center;
+          color: #333; /* Darker text for better visibility */
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+        .chart-container {
+          width: 30%;
+          margin: 0 auto;
+        }
+        canvas {
+          max-width: 100%;
+          height: auto;
+        }
+        .table-container {
+          width: 100%;
+          margin-top: 20px;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          background-color: #fff;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        table, th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        th {
+          background-color: #f2f2f2;
+          text-align: left;
+        }
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+        tr:hover {
+          background-color: #f1f1f1;
+        }
+      </style>
+    </head>
+    <body>
+
+      <div class="header-container">
+        <h1>Test Results Summary</h1>
+        <p>Total Tests: 5 | Passed: 5 | Failed: 0 | Skipped: 0</p>
+        <div class="chart-container">
+          <canvas id="donutChart"></canvas>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Test Name</th>
+              <th>Steps</th>
+              <th>Status</th>
+              <th>Time Taken</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+    <tr>
+      <td>1</td>
+      <td>Login with invalid credentials and verify failure</td>
+      <td>Before Hooks, locator.getByRole('link', { name: 'Log in' }).click, locator.getByLabel('Email:').fill, locator.getByLabel('Password:').fill, locator.getByRole('button', { name: 'Log in' }).click, locator.getByText('Login was unsuccessful.').isVisible, locator.getByText('Login was unsuccessful.').textContent, After Hooks</td>
+      <td>Passed</td>
+      <td>3.43s</td>
+    </tr>
+  
+    <tr>
+      <td>2</td>
+      <td>Login with invalid user and verify failure</td>
+      <td>Before Hooks, locator.getByRole('link', { name: 'Log in' }).click, locator.getByLabel('Email:').fill, locator.getByLabel('Password:').fill, locator.getByRole('button', { name: 'Log in' }).click, locator.getByText('Login was unsuccessful.').isVisible, After Hooks</td>
+      <td>Passed</td>
+      <td>3.71s</td>
+    </tr>
+  
+    <tr>
+      <td>3</td>
+      <td>Register in Tricentis site</td>
+      <td>Before Hooks, locator.getByRole('link', { name: 'Register' }).click, locator.getByLabel('Male', { exact: true }).check, locator.getByLabel('First name:').fill, locator.getByLabel('Last name:').fill, locator.getByLabel('Email:').fill, locator.getByLabel('Password:', { exact: true }).fill, locator.getByLabel('Confirm password:').fill, locator.getByRole('button', { name: 'Register' }).click, locator.getByText('The specified email already').isVisible, locator.getByText('The specified email already').textContent, After Hooks</td>
+      <td>Passed</td>
+      <td>3.80s</td>
+    </tr>
+  
+    <tr>
+      <td>4</td>
+      <td>Login and log out with valid user credentials</td>
+      <td>Before Hooks, locator.getByRole('link', { name: 'Log in' }).click, locator.getByLabel('Email:').fill, locator.getByLabel('Password:').fill, locator.getByRole('button', { name: 'Log in' }).click, expect.toBeVisible, locator.getByRole('link', { name: 'Log out' }).click, After Hooks</td>
+      <td>Passed</td>
+      <td>4.00s</td>
+    </tr>
+  
+    <tr>
+      <td>5</td>
+      <td>Update email id and verify the email id</td>
+      <td>Before Hooks, locator.getByRole('link', { name: 'adibkhaled@outlook.com' }).click, locator.getByLabel('Email:').fill, locator.getByRole('button', { name: 'Save' }).click, expect.toBeVisible, locator.getByLabel('Email:').fill, locator.getByRole('button', { name: 'Save' }).click, expect.toBeVisible, locator.getByRole('link', { name: 'Log out' }).click, After Hooks</td>
+      <td>Passed</td>
+      <td>5.20s</td>
+    </tr>
+  
+          </tbody>
+        </table>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        const ctx = document.getElementById('donutChart').getContext('2d');
+        const donutChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Passed', 'Failed', 'Skipped'],
+            datasets: [{
+              label: 'Test Results',
+              data: [5, 0, 0],
+              backgroundColor: ['#4CAF50', '#F44336', '#FFC107'],
+              hoverOffset: 4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false
+          }
+        });
+      </script>
+    </body>
+    </html>
+  
