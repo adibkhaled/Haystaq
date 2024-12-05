@@ -46,7 +46,7 @@ test('Update first name and last name', async ({ page }) => {
   await user.logOut();
 });
 
-test('Verify Update first name and last name', async ({ page }) => {
+test('Verify update first name and last name', async ({ page }) => {
   const customerPage = new CustomerPage(page);
   const user = new UserPage(page);
 

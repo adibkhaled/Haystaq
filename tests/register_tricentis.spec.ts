@@ -10,7 +10,7 @@ test.beforeEach(async ({ page })=> {
 });
 
 
-test('Register in Tricentis site', async ({ page }) => {
+test('Register in tricentis site', async ({ page }) => {
   const register = new RegisterPage(page);
   const user = new UserPage(page);
 
