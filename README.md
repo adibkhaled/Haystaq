@@ -38,14 +38,19 @@ De eenvoudigste manier om aan de slag te gaan met Playwright Test is door het in
 npm init playwright@latest
 ```
 
-## Clone de heystaq project:
+### Clone de heystaq project:
 
 ```Shell
 git clone git@github.com:adibkhaled/heystaq.git
 ```
 
-## Het uitvoeren van de test
+### Het uitvoeren van de test
 
 ```Shell
 npx playwright test
+```
+
+### Rapport uitvoeren
+```Shell
+ npx playwright test --reporter=./src/CustomReporter.js
 ```
