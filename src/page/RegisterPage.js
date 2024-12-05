@@ -1,7 +1,6 @@
-// RegistrationPage.js
 import { expect } from '@playwright/test';
 
-export class HelperPage {
+export class RegisterPage {
   constructor(page) {
     this.page = page;
   }
@@ -10,8 +9,8 @@ export class HelperPage {
     await this.page.getByRole('link', { name: 'Register' }).click();
   }
 
-  async navigateToLogin() {
-    await this.page.getByRole('link', { name: 'Log in' }).click();
+  async submitRegistration() {
+    await this.page.getByRole('button', { name: 'Register' }).click();
   }
 
   async fillRegistrationForm(user) {
@@ -23,33 +22,8 @@ export class HelperPage {
     await this.page.getByLabel('Confirm password:').fill(user.password);
   }
 
-  async fillLogin(user) {
-    await this.page.getByLabel('Email:').fill(user.email);
-    await this.page.getByLabel('Password:').fill(user.password);
-  }
-
-  async submitLogin() {
-    await this.page.getByRole('button', { name: 'Log in' }).click();
-  }
-
-  async submitRegistration() {
-    await this.page.getByRole('button', { name: 'Register' }).click();
-  }
-
   async continueAfterRegistration() {
     await this.page.getByRole('button', { name: 'Continue' }).click();
-  }
-
-  async verifyUserLoggedIn(email) {
-    await expect(this.page.getByRole('link', { name: email })).toBeVisible();
-  }
-
-  async logOut() {
-    await this.page.getByRole('link', { name: 'Log out' }).click();
-  }
-
-  async clickEmailLink(email){
-    await this.page.getByRole('link', { name: email }).click();
   }
 
   async alreadyRegister(){
@@ -66,15 +40,5 @@ export class HelperPage {
     return 'No'
 
   }
-
-  async verifyInvalidLogin(){
-    try {
-      const errorMessage = this.page.getByText('Login was unsuccessful.'); 
-      if (await errorMessage.isVisible()) {
-        console.log('Login unsuccessful', await errorMessage.textContent());
-      }
-    } catch (error) {
-      return error.message;
-    }
-  }
+  
 }

@@ -1,6 +1,7 @@
 // registration.test.js
 import { test } from '@playwright/test';
-import { HelperPage } from '../src/page/HelperPage';
+import { RegisterPage } from '../src/page/RegisterPage';
+import { UserPage } from '../src/page/UserPage';
 import data from "../data.json";
 
 
@@ -10,15 +11,16 @@ test.beforeEach(async ({ page })=> {
 
 
 test('Register in Tricentis site', async ({ page }) => {
-  const helper = new HelperPage(page);
+  const register = new RegisterPage(page);
+  const user = new UserPage(page);
 
-  await helper.navigateToRegister();
-  await helper.fillRegistrationForm(data.register_data);
-  await helper.submitRegistration();
-  if (await helper.alreadyRegister() === 'No') {
-    await helper.continueAfterRegistration();
-    await helper.verifyUserLoggedIn(data.register_data.email);
-    await helper.logOut()
+  await register.navigateToRegister();
+  await register.fillRegistrationForm(data.register_data);
+  await register.submitRegistration();
+  if (await register.alreadyRegister() === 'No') {
+    await register.continueAfterRegistration();
+    await user.verifyUserLoggedIn(data.register_data.email);
+    await user.logOut()
   } else {
     console.log('Email already specified');
   };
