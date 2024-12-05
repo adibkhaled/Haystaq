@@ -21,7 +21,7 @@ export class CustomerPage {
     await this.page.getByRole('button', { name: 'Save' }).click();
   }
 
-  async verifyFirstName(lastname){
+  async verifyFirstName(firstname){
     await expect(this.page.getByLabel('First name:')).toHaveValue(firstname);
   }
   

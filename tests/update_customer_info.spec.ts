@@ -43,6 +43,15 @@ test('Update first name and last name', async ({ page }) => {
   await customerPage.fillUpdateFirstName(data.customer_name.firstname);
   await customerPage.fillUpdateLastName(data.customer_name.lastname);
   await customerPage.saveButton();
-  await customerPage.verifyLastName(data.customer_name.lastname);
+  await user.logOut();
+});
+
+test('Verify Update first name and last name', async ({ page }) => {
+  const customerPage = new CustomerPage(page);
+  const user = new UserPage(page);
+
+  await user.clickEmailLink(data.login_credential.email);
+  await customerPage.verifyFirstName(data.customer_name.firstname);
+  await customerPage.verifyLastName(data.customer_name.lastname)
   await user.logOut();
 });
