@@ -59,25 +59,29 @@ The testing covers:
 | :-: | :-: | :-: | :-: | :-: |
 |TC05|Verify user can enter a timesheet for past week|User is logged in.|1\. Navigate to "Enter Timesheet".<br>2\. Select a date within the past week.<br>3\. Fill all fields.<br>4\. Save.|Timesheet is saved successfully.|
 |TC06|Verify timesheet cannot be entered for future dates|User is logged in.|1\. Navigate to "Enter Timesheet".<br>2\. Select a future date.<br>3\. Fill all fields.<br>4\. Save.|Error message is displayed: "Invalid date."|
+|TC07|Verify user can enter a timesheet for current date|User is logged in.|1\. Navigate to "Enter Timesheet".<br>2\. Select a date within the current date.<br>3\. Fill all fields.<br>4\. Save.|Timesheet is saved successfully.|
+|TC08|Verify timesheet cannot be entered for invalid dates|User is logged in.|1\. Navigate to "Enter Timesheet".<br>2\. Select a invalid date (like: 30-02-2024).<br>3\. Fill all fields.<br>4\. Save.|Error message is displayed: "Invalid date."|
+
 
 **Module: View and Edit Timesheets**
 
 |**Test Case ID**|**Test Description**|**Precondition**|**Steps**|**Expected Result**|
 | :-: | :-: | :-: | :-: | :-: |
-|TC07|Verify user can view all timesheets|Timesheets exist.|1\. Navigate to "View Timesheets".|List of timesheets is displayed.|
-|TC08|Verify user can edit a timesheet|Timesheet exists.|1\. Navigate to "View Timesheets".<br>2\. Select "Edit".<br>3\. Update fields.<br>4\. Save.|Changes are saved successfully.|
+|TC09|Verify user can view all timesheets|Timesheets exist.|1\. Navigate to "View Timesheets".|List of timesheets is displayed.|
+|TC10|Verify user can edit a timesheet|Timesheet exists.|1\. Navigate to "View Timesheets".<br>2\. Select "Edit".<br>3\. Update fields.<br>4\. Save.|Changes are saved successfully.|
 
 **Module: Timesheet Submission**
 
 |**Test Case ID**|**Test Description**|**Precondition**|**Steps**|**Expected Result**|
 | :-: | :-: | :-: | :-: | :-: |
-|TC09|Verify user can submit timesheet|Valid timesheet exists.|1\. Navigate to "Submit Timesheets".<br>2\. Select timesheet.<br>3\. Click "Submit".|Timesheet status changes to "Pending Approval".|
+|TC11|Verify user can submit timesheet|Valid timesheet exists.|1\. Navigate to "Submit Timesheets".<br>2\. Select timesheet.<br>3\. Click "Submit".|Timesheet status changes to "Pending Approval".|
 
 **Module: Manager Actions**
 
 |**Test Case ID**|**Test Description**|**Precondition**|**Steps**|**Expected Result**|
 | :-: | :-: | :-: | :-: | :-: |
-|TC10|Verify manager can approve timesheet|Timesheet is submitted.|1\. Log in as manager.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
+|TC12|Verify manager can approve timesheet|Timesheet is submitted.|1\. Log in as manager.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
+|TC12|Verify no one update after approve timesheet|Timesheet is approved.|1\. Log in as user.<br>2\. Navigate to "Approve Timesheets".<br>3\. Select timesheet.<br>4\. Click "Approve".|Timesheet status changes to "Approved".|
 
 -----
 **7. Risks and Assumptions**
