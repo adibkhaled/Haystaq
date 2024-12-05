@@ -52,6 +52,6 @@ test('Verify update first name and last name', async ({ page }) => {
 
   await user.clickEmailLink(data.login_credential.email);
   await customerPage.verifyFirstName(data.customer_name.firstname);
-  await customerPage.verifyLastName(data.customer_name.lastname)
+  await customerPage.verifyLastName(data.customer_name.lastname);
   await user.logOut();
 });

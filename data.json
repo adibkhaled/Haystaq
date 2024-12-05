@@ -14,18 +14,18 @@
         "password": "Adib"
     },
     "register_data": {
-         "firstname": "Adib",
-         "lastname": "Khan",
-         "email": "adibkhaled@outlook.com",
+         "firstname": "Test01",
+         "lastname": "Testy02",
+         "email": "adibkhaled09@outlook.com",
          "password": "Adib1234!"
     },
     "update_email": {
-        "email_01": "adib@test.com",
+        "email_01": "adib_01@outlook.com",
         "email_02": "adibkhaled@outlook.com"
     },
     "customer_name": {
-        "firstname": "Adib_Test",
-         "lastname": "Khan_test"
+        "firstname": "Adib",
+         "lastname": "Khan"
     }
     
 }

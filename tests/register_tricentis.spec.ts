@@ -20,7 +20,7 @@ test('Register in tricentis site', async ({ page }) => {
   if (await register.alreadyRegister() === 'No') {
     await register.continueAfterRegistration();
     await user.verifyUserLoggedIn(data.register_data.email);
-    await user.logOut()
+    await user.logOut();
   } else {
     console.log('Email already specified');
   };
