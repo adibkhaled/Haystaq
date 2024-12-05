@@ -1,9 +1,28 @@
 {
     "url": "https://demowebshop.tricentis.com/",
     "title": "Demo Web Shop",
-    "firstname": "Adib",
-    "lastname": "Khan",
-    "email": "adibkhaled@outlook.com",
-    "valid_pass": "Adib1234!",
-    "in_valid_pass": "Adib123!"
+    "login_credential" : {
+        "email": "adibkhaled@outlook.com",
+        "password": "Adib1234!"
+    },
+    "invalid_user": {
+        "email": "adibkhaled@outlook.com",
+        "password": "Adib1234!"
+    },
+    "invalid_pass": {
+        "email": "adibkhaled@outlook.com",
+        "password": "Adib"
+    },
+    "register_data": {
+         "firstname": "Adib",
+         "lastname": "Khan",
+         "email": "adibkhaled@outlook.com",
+         "password": "Adib1234!"
+    },
+    "update_email": {
+        "email_01": "adib01@test.com",
+        "email_02": "adibkhaled@outlook.com"
+    }
+   
+    
 }
