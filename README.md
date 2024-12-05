@@ -13,7 +13,7 @@ Gegeven onderstaande requirements stel de test cases op die jij zou gebruiken.
 ### [Klik hier](https://github.com/adibkhaled/heystaq/blob/main/Test_plan/test_cases.md) voor het testplan. 
 
 
-**Automation opdracht**
+## Automation opdracht
 
 Met een test automation tool naar keuze zet de juiste automation op om volgende test case uit te voeren en neem hierbij de test automatiserings principes in acht.
 
@@ -25,7 +25,7 @@ Automatiseer het volgende en bedenk zelf wat testgevallen:
 * Het is mogelijk om in en uit te loggen
 * Het is mogelijk je account aan te passen
 
-## Voorwaarde:
+### Voorwaarde:
 
 * Install Node js
 * Install git
@@ -41,7 +41,7 @@ npm init playwright@latest
 ## Clone de heystaq project:
 
 ```Shell
-git clone 
+git clone git@github.com:adibkhaled/heystaq.git
 ```
 
 ## Het uitvoeren van de test
