@@ -48,22 +48,14 @@ export class HelperPage {
     await this.page.getByRole('link', { name: 'Log out' }).click();
   }
 
-  async saveButton(){
-    await this.page.getByRole('button', { name: 'Save' }).click();
-  }
-
   async clickEmailLink(email){
     await this.page.getByRole('link', { name: email }).click();
   }
 
-  async fillUpdateEmail(email) {
-    await this.page.getByLabel('Email:').fill(email);
-  }
-
-
   async alreadyRegister(){
     try {
-      const errorMessage = this.page.getByText('The specified email already'); 
+      const errorMessage = this.page.getByText('The specified email already exists');
+      
       if (await errorMessage.isVisible()) {
         console.log('Email already specified:', await errorMessage.textContent());
         return 'Yes'; 

@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { HelperPage } from '../src/HelperPage';
+import { HelperPage } from '../src/page/HelperPage';
 import data from "../data.json";
 
-// Helper function to perform login
+// Function to perform login
 const performLogin = async (login, userData) => {
   await login.navigateToLogin();
   await login.fillLogin(userData);
@@ -25,15 +25,15 @@ test('Login and log out with valid user credentials', async ({ page }) => {
 test('Login with invalid password and verify failure', async ({ page }) => {
   const helper = new HelperPage(page);
 
-  // Perform login with invalid credentials and verify login failure
-  await performLogin(helper, data.invalid_pass);
+  // Perform login with invalid password and verify login failure
+  await performLogin(helper, data.invalid_password);
   await helper.verifyInvalidLogin();
 });
 
 test('Login with wrong user and verify failure', async ({ page }) => {
   const helper = new HelperPage(page);
 
-  // Perform login with invalid credentials and verify login failure
+  // Perform login with invalid user and verify login failure
   await performLogin(helper, data.invalid_user);
   await helper.verifyInvalidLogin();
 });

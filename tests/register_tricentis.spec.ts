@@ -1,6 +1,6 @@
 // registration.test.js
 import { test } from '@playwright/test';
-import { HelperPage } from '../src/HelperPage';
+import { HelperPage } from '../src/page/HelperPage';
 import data from "../data.json";
 
 

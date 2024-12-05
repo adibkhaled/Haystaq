@@ -5,4 +5,3 @@ node_modules/
 /playwright/.cache/
 ../test-results/
 .DS_Store
-data.json

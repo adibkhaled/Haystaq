@@ -9,20 +9,23 @@
         "email": "adibkhaled@outlook.com",
         "password": "Adib1234!"
     },
-    "invalid_pass": {
+    "invalid_password": {
         "email": "adibkhaled@outlook.com",
         "password": "Adib"
     },
     "register_data": {
          "firstname": "Adib",
          "lastname": "Khan",
-         "email": "adibkhaled01@outlook.com",
+         "email": "adibkhaled@outlook.com",
          "password": "Adib1234!"
     },
     "update_email": {
-        "email_01": "adib01@test.com",
+        "email_01": "adib@test.com",
         "email_02": "adibkhaled@outlook.com"
+    },
+    "customer_name": {
+        "firstname": "Adib_Tester",
+         "lastname": "Khan_test"
     }
-   
     
 }
