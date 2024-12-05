@@ -1,4 +1,4 @@
-# Heystaq opdrachten
+# Haystaq opdrachten
 
 ## [Test Plan](https://github.com/adibkhaled/heystaq/blob/main/Test_plan/test_cases.md)
 
